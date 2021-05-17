@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "325fc62c-2a66-4362-99bf-b04be55ef985",
+		"name": "Stratio War",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Testing Stratio War",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response should be okay to process\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.jsonBody([\"34-10-42-edcb86430\",\"73-15-46-dc9876321\",\"64-9-29-edba976510\"]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[   \r\n    \"2952410b-0a94-446b-8bcb-448dc6e30b08\",\r\n    \"6f9c15fa-ef51-4415-afab-36218d76c2d9\",\r\n    \"2ab81c9b-1719-400c-a676-bdba976150eb\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/decryption",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"decryption"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

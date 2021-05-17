@@ -10,7 +10,7 @@ class StratioWarDecryption(
                             encoder: Encoder[DecryptedMessage] = DecryptedMessageEncoder,
                             decryptionService: Decryption[InterceptedMessage, DecryptedMessage] = InterceptedMessageDecrypt
                           ) {
-  def decryptRawMessage(targets: Array[String]): Array[String] = {
+  def decryptRawMessage(targets: List[String]): List[String] = {
     targets
       .flatMap(decoder.decode)
       .flatMap(decryptionService.decrypt)
