@@ -17,9 +17,9 @@ class StratioWarDecryptionSpec extends AnyFeatureSpec with GivenWhenThen {
       )
       And("expected value")
       val expected = Array(
-        "22-10-42-edcb86430",
+        "34-10-42-edcb86430",
         "73-15-46-dc9876321",
-        "64-9-35-edba976510"
+        "64-9-29-edba976510"
       )
       When("i call to decrypt raw messages")
       val results = subject.decryptRawMessage(input)
